@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:key="setting"
+    android:title="설정">
+
+
+    <PreferenceCategory xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="setting_1"
+        android:title="앱 정보">
+        <Preference
+            android:key="setting_1_1"
+            android:selectable="true"
+            android:summary="v1.2"
+            android:title="버전" />
+
+        <Preference
+            android:key="setting_1_2"
+            android:selectable="true"
+            android:summary="학교의 공지사항,급식 등의 정보를 편리하게 받아올수있습니다."
+            android:title="동백고 어플리케이션" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="setting_2"
+        android:title="개발자 정보">
+        <Preference
+            android:defaultValue="true"
+            android:key="setting_2_2"
+            android:summary="프로젝트 총괄, 개발 및 디자인"
+            android:title="앱 스튜디오 / 20706 김현준" />
+
+        <Preference
+            android:defaultValue="true"
+            android:key="setting_2_3"
+            android:summary="프로젝트 기획"
+            android:title="앱 스튜디오 / 20702 김도윤" />
+
+        <Preference
+            android:key="setting_2_4"
+            android:summary="동백고등학교 IT 동아리 앱 스튜디오"
+            android:title="Powered by APP Studio" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="setting_3"
+        android:title="문의">
+        <Preference
+            android:key="setting_3_1"
+            android:selectable="true"
+            android:summary="h2is1234"
+            android:title="카카오톡" />
+
+        <Preference
+            android:key="setting_3_2"
+            android:selectable="true"
+            android:summary="h2is1234@naver.com"
+            android:title="이메일">
+
+            <intent
+                android:action="android.intent.action.SENDTO"
+                android:data="mailto:h2is1234@naver.com" />
+
+        </Preference>
+
+    </PreferenceCategory>
+</PreferenceScreen>
+

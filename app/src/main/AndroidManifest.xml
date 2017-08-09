@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dongbaek.hs.kr.dbapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="동백고등학교"
+        android:theme="@style/dongbaek_theme">
+        <activity
+            android:name=".MainActivity"
+            android:label="동백고"
+            android:theme="@style/dongbaek_theme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Notice"
+            android:label="공지사항" />
+        <activity
+            android:name=".Meal"
+            android:label="급식 정보" />
+        <activity
+            android:name=".Home"
+            android:label="학교 행사" />
+        <activity
+            android:name=".Info"
+            android:label="정보" />
+        <activity
+            android:name=".Promotion"
+            android:label="동아리 프로모션" />
+        <activity
+            android:name=".Schedule"
+            android:label="학사일정" />
+
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".WebViewActivity"></activity>
+    </application>
+
+</manifest>

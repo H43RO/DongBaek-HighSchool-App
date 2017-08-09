@@ -1,0 +1,145 @@
+<?xml version="1.1" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    android:background="#f6f6f6"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:theme="@style/menu_theme" />
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:id="@+id/title_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                android:text="월요일"
+                android:textColor="#b9232323"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/title_day"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/title_day"
+                android:layout_toRightOf="@+id/title_day"
+                android:text="조회시간"
+                android:typeface="sans" />
+
+            <Switch
+                android:id="@+id/mealswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:checked="false"
+                android:showText="false"
+                android:textOff="중식"
+                android:textOn="석식"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/title_day"
+                android:layout_marginLeft="5dp"
+                android:text="요일을 변경하려면 요일 클릭"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="중식/석식" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/meallist"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/kcalviewer"
+            android:divider="@null"
+            android:dividerHeight="4.5dp"/>
+
+        <ProgressBar
+
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:id="@+id/KcalProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/title"
+            android:indeterminate="false"
+            android:max="2200" />
+
+        <TextView
+            android:layout_marginRight="4dp"
+            android:id="@+id/kcalviewer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/KcalProgress"
+            android:text="Kcal" />
+
+        <ImageButton
+            android:id="@+id/sharebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/meallist"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:src="@drawable/ic_action_share" />
+
+    </RelativeLayout>
+</LinearLayout>

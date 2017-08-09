@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "60508994399",
+    "firebase_url": "https://fir-dbapp-b9075.firebaseio.com",
+    "project_id": "firebase-dbapp",
+    "storage_bucket": "firebase-dbapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60508994399:android:c32f08b3f9d014ec",
+        "android_client_info": {
+          "package_name": "dongbaek.hs.kr.dbapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60508994399-s6jtf6i2k0nr7of6r5ike2bg872s2e7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3BUwus3ZbixrLjHR5J4uZnOzYoyT2M54"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
