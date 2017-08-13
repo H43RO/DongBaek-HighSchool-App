@@ -19,6 +19,8 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import java.util.ArrayList;
 import java.util.Timer;
 
+import dongbaek.hs.kr.dbapp.util.RecentNoticeManager;
+
 public class MainActivity extends Activity {
 
     private int contentView;
@@ -46,7 +48,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         FirebaseInstanceId.getInstance().getToken();
 
-
+        TextView noticeTextView = (TextView) findViewById(R.id.noticetextview);
+        noticeTextView.setText(new RecentNoticeManager(this).loadNoticeContent());
 
 
         card0 = (CardView) findViewById(R.id.card_1);

@@ -101,7 +101,6 @@ public class Meal extends ActionBarActivity {
             public void onClick(View v) {
 
                 Intent msg = new Intent(Intent.ACTION_SEND);
-
                 msg.addCategory(Intent.CATEGORY_DEFAULT);
 
                 if (mealswitch.isChecked()) {
@@ -291,6 +290,7 @@ public class Meal extends ActionBarActivity {
                 date = MealLibrary.getDateNew(CountryCode, schulCode, schulCrseScCode, schulKndScCode, KNDDINNER);
             }
 
+            if (meal[PARSEDAY] == null || meal[PARSEDAY].trim().length() == 0) meal[PARSEDAY] = "급식 정보가 없습니다.";
 
             Log.d("LOGLOG", meal[PARSEDAY]);
 
@@ -363,19 +363,19 @@ public class Meal extends ActionBarActivity {
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-
                     try {
-
                         listing();
-                        float i = Float.valueOf(kcal[PARSEDAY]);
-                        kcalbar.setProgress((int) i);
-                        kcalview.setText(kcal[PARSEDAY] + "/" + kcalbar.getMax() + "kcal");
+                        if(kcal[PARSEDAY] != null) {
+                            float i = Float.valueOf(kcal[PARSEDAY]);
+                            kcalbar.setProgress((int) i);
+                            kcalview.setText(kcal[PARSEDAY] + "/" + kcalbar.getMax() + "kcal");
+                        }
                         mProgressDialog.dismiss();
                     } catch (Exception e) {
-
+                        Log.d("mealError", e+"");
                         mProgressDialog.dismiss();
                         errordialog = new AlertDialog.Builder(Meal.this);
-                        errordialog.setMessage("\n");
+                        errordialog.setMessage("급식정보를 불러올 수 없습니다.\n*재량휴업일,공휴일에 발생");
                         errordialog.show();
                         kcalbar.setProgress(0);
                         kcalview.setText("ERROR/" + kcalbar.getMax() + "kcal");

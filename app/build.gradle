@@ -2,16 +2,15 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "22.0.0"
+    buildToolsVersion '25.0.0'
 
 
     defaultConfig {
         applicationId "dongbaek.hs.kr.dbapp"
         minSdkVersion 16
         targetSdkVersion 21
-        versionCode 8
-        versionName "v2.0"
-        resValue "string", "tray__authority", "${applicationId}.tray"
+        versionCode 9
+        versionName "v2.1"
     }
     buildTypes {
         release {
@@ -30,7 +29,7 @@ dependencies {
     compile 'it.neokree:MaterialTabs:0.11'
     compile 'com.google.firebase:firebase-core:9.4.0'
     compile 'com.google.firebase:firebase-messaging:9.4.0'
-    compile 'net.grandcentrix.tray:tray:0.10.0'
+    compile 'net.grandcentrix.tray:tray:0.12.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

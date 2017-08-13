@@ -13,7 +13,7 @@
         <Preference
             android:key="setting_1_1"
             android:selectable="true"
-            android:summary="v1.2"
+            android:summary="v1.3"
             android:title="버전" />
 
         <Preference
@@ -27,21 +27,15 @@
 
     <PreferenceCategory xmlns:android="http://schemas.android.com/apk/res/android"
         android:key="setting_2"
-        android:title="개발자 정보">
+        android:title="크레딧">
         <Preference
             android:defaultValue="true"
             android:key="setting_2_2"
             android:summary="프로젝트 총괄, 개발 및 디자인"
-            android:title="앱 스튜디오 / 20706 김현준" />
+            android:title="앱 스튜디오 / 30707 김현준" />
 
         <Preference
-            android:defaultValue="true"
             android:key="setting_2_3"
-            android:summary="프로젝트 기획"
-            android:title="앱 스튜디오 / 20702 김도윤" />
-
-        <Preference
-            android:key="setting_2_4"
             android:summary="동백고등학교 IT 동아리 앱 스튜디오"
             android:title="Powered by APP Studio" />
 

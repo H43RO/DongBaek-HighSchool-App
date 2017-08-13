@@ -27,12 +27,12 @@ public class RecentNoticeManager {
         Log.d("RECENTPREF_input", title + content);
     }
 
-    public String loadNoticeTitle(){
+    public String loadNoticeTitle() {
         return pref.getString(RECENT_NOTICE_TITLE, "");
     }
 
-    public String loadNoticeContent(){
-        Log.d("RECENTPREF_output", pref.getString(RECENT_NOTICE_CONTENT, "알림이 운지했습니다"));
-        return pref.getString(RECENT_NOTICE_CONTENT, "알림이 운지했습니다");
+    public String loadNoticeContent() {
+        Log.d("RECENTPREF_output", pref.getString(RECENT_NOTICE_CONTENT, ""));
+        return pref.getString(RECENT_NOTICE_CONTENT, "");
     }
 }
